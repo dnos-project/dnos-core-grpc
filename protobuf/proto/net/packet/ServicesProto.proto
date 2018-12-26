@@ -17,7 +17,6 @@ message PacketOutStatus {
 
 service PacketNotification {
     rpc register (RegistrationRequest) returns (RegistrationResponse);
-    rpc subscribe (stream Topic) returns (stream Notification);
     rpc onEvent (Topic) returns (stream Notification);
 
 }
