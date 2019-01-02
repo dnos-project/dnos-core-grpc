@@ -1,5 +1,5 @@
 syntax = "proto3";
-option java_package = "org.onosproject.grpc.net.packet.models";
+option java_package = "org.onosproject.grpc.net.models";
 
 package net.packet;
 
@@ -15,7 +15,7 @@ message PacketOutStatus {
 }
 
 
-service PacketNotification {
+service EventNotification {
     rpc register (RegistrationRequest) returns (RegistrationResponse);
     rpc onEvent (Topic) returns (stream Notification);
 
@@ -23,7 +23,8 @@ service PacketNotification {
 
 
 enum topicType {
-    PACKET_CONTEXT = 0;
+    PACKET_EVENT = 0;
+    LINK_EVENT = 1;
 }
 
 

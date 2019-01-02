@@ -64,7 +64,7 @@ java_proto_library(
 ### sevices ###
 proto_library(
     name = "Services_proto",
-    srcs = ["net/packet/ServicesProto.proto"],
+    srcs = ["net/ServicesProto.proto"],
     proto_source_root = PROTO_SOURCE_ROOT,
     deps = [
         ":OutboundPacket_proto",
